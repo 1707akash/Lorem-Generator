@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import './Component/Data';
+import text from './Component/Data';
+import Para from './Component/Para';
+
+
+// text.map((elem,index)=>{
+//   console.log(elem);
+// })
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1>TIRED OF BORING LOREM IPSUM?</h1>
+    <span>Paragraphs:</span>
+    <input type="number" />
+    <button>GENERATE</button>
+    
+
+    {
+      text.map((elem,index)=>{
+        return(
+          <Para description={elem} />
+        )
+      })
+    }
+    
+    </>
   );
 }
 
