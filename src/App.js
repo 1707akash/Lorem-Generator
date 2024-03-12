@@ -3,6 +3,7 @@ import './App.css';
 import './Component/Data';
 import text from './Component/Data';
 import Para from './Component/Para';
+import {useState} from "react";
 
 
 // text.map((elem,index)=>{
@@ -11,19 +12,31 @@ import Para from './Component/Para';
 
 
 function App() {
+
+  const[indexNum , setIndex] = useState(0);
+
+  function generateIndex(){
+    const paragraphReqd = document.getElementById("numOfPara").value ;
+    setIndex(paragraphReqd);
+    console.log(paragraphReqd);
+  }
+
+
+
   return (
     <>
     <h1>TIRED OF BORING LOREM IPSUM?</h1>
     <span>Paragraphs:</span>
-    <input type="number" />
-    <button>GENERATE</button>
+    <input id='numOfPara' type="number" />
+    <button onClick={generateIndex}>GENERATE</button>
     
 
     {
-      text.map((elem,index)=>{
+      text.slice(0,indexNum).map((elem,index)=>{
         return(
-          <Para description={elem} />
+          <Para description={elem} key={index} />
         )
+        
       })
     }
     

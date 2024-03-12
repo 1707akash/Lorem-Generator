@@ -3,4 +3,22 @@
 body{
     text-align: center;
     padding: 5rem;
+    box-shadow: -11px 14px 76px -20px rgba(189,16,224,0.19) inset;
+    color: blueviolet;
+    height: 80vh;
+}
+span{
+    padding: 0 1rem;
+}
+input{
+    margin: 0 1rem 0 0;
+    padding-left: 1rem;
+    border: 2px solid blueviolet;
+}
+button{
+    background-color: blueviolet;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
 }
